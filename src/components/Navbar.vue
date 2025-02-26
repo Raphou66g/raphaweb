@@ -36,7 +36,7 @@
 import DateTime from '@/components/DateTime.vue';
 
 
-import { ref, watch, computed } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import { projects } from "@/data/projects"; // Importe la liste des projets
 
