@@ -88,5 +88,4 @@ h1 {
   -webkit-background-clip: content-box;
   color: rgb(255, 0, 0);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  /* Adjusted to prevent overlap */
 }

@@ -6,7 +6,7 @@
         <div class="projects">
             <router-link v-for="(project, index) in sortedProjects" :key="index" :to="`/projects/${project.id}`"
                 :id="project.id" class="project-link" :class="{ 'reverse': index % 2 !== 0 }">
-                <img :src="project.image" :alt="`Preview de ${project.title}`" class="preview">
+                <img :src="getImagePath(project.image)" :alt="`Preview de ${project.title}`" class="preview">
                 <div class="project-text">
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.brief }}</p>
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -42,6 +42,10 @@ import { projects } from "@/data/projects";
 const sortedProjects = computed(() =>
     [...projects].sort((a, b) => new Date(b.date) - new Date(a.date))
 );
+
+const getImagePath = (path) => {
+  return path.startsWith("/assets/") ? path : `/assets/${path}`;
+};
 </script>
 
 <style scoped>

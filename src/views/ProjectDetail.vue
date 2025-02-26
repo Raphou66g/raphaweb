@@ -14,7 +14,7 @@
         <!-- Affichage des liens -->
         <div class="links">
             <a v-for="link in project.links" :key="link.url" :href="link.url" target="_blank" class="link-item">
-                <img :src="'/src/assets/icons/' + getIcon(link.name)" :alt="link.name" class="icon" />
+                <img :src="getIcon(link.name)" :alt="link.name" class="icon" />
                 {{ link.name }}
             </a>
         </div>
@@ -49,7 +49,7 @@
 
                 <Transition :name="slideDirection">
                     <img v-if="currentMedia.type === 'image'" :src="currentMedia.src" class="lightbox-media"
-                        :key="currentIndex">
+                        :key="currentIndex" alt="xP">
                     <video v-else :src="currentMedia.src" class="lightbox-media" controls autoplay
                         :key="currentIndex"></video>
                 </Transition>
@@ -98,10 +98,12 @@ const nextMedia = () => {
 const currentMedia = computed(() => project.value.media[currentIndex.value]);
 
 const getIcon = (name) => {
-    if (name.toLowerCase().includes("github")) return "github-mark-white.svg";
-    if (name.toLowerCase().includes("gitlab")) return "gitlab-logo-500.svg";
-    if (name.toLowerCase().includes("google")) return "google-docs.svg";
-    return "facepalm.png"; // Icône générique pour les autres liens
+    const path = "/assets/icons/";
+    let suffix = "facepalm.png";
+    if (name.toLowerCase().includes("github")) suffix = "github-mark-white.svg";
+    if (name.toLowerCase().includes("gitlab")) suffix = "gitlab-logo-500.svg";
+    if (name.toLowerCase().includes("google")) suffix = "google-docs.svg";
+    return path + suffix; // Icône générique pour les autres liens
 };
 </script>
 
