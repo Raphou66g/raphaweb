@@ -3,7 +3,7 @@
     <div class="nav-div">
       <ul class="nav-list">
         <li class="nav-item">
-          <router-link to="/accueil" class="nav-link" :class="{ active: isActive('/accueil') }">Accueil</router-link>
+          <router-link to="/" class="nav-link" :class="{ active: isActive('/') }">Accueil</router-link>
         </li>
         <li class="nav-item">
           <div class="dropdown" @mouseover="dropdownOpen = true" @mouseleave="dropdownOpen = false">
@@ -44,7 +44,7 @@ const route = useRoute();
 const dropdownOpen = ref(false);
 
 // Vérifie si le lien est actif
-const isActive = (path) => route.path.startsWith(path);
+const isActive = (path) => route.path.endsWith(path);
 
 const sortedProjects = computed(() =>
   [...projects].sort((a, b) => new Date(b.date) - new Date(a.date))

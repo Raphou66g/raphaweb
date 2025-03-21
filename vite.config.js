@@ -18,7 +18,5 @@ export default defineConfig({
       input: resolve(__dirname, 'index.html')
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/raphaweb/'
-    : '/'
+  publicPath: '/'
 });
