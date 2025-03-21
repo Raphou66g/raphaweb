@@ -29,12 +29,12 @@ export const projects = [
         title: "Ma page Web🔧",
         date: "2025-02-03",
         brief: "Vous êtes actuellement en train de visiter ce projet",
-        description: ["Une page web pour présenter mes projets et mes compétences", "Le site est réalisé en HTML, CSS et JavaScript, et utilise le framework Vue.js"],
+        description: ["Une page web afin de présenter mes projets et mes compétences", "Le site est réalisé en HTML, CSS et JavaScript, et utilise le framework Vue.js"],
         image: '/assets/projects/web/preview.png',
         media: [
             { type: "image", src: "/assets/projects/web/preview.png" },
         ],
-        links: []
+        links: [{name: "GitHub", url: "https://github.com/Raphou66g/raphaweb" }]
     },
     {
         id: "crossprices",

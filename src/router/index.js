@@ -8,8 +8,7 @@ import Test from '@/views/Test.vue';
 import Contact from '@/views/Contact.vue';
 
 const routes = [
-  { path: '/', redirect: '/accueil' },
-  { path: '/accueil', component: Home },
+  { path: '/', component: Home },
   { path: '/test', component: Test },
   { path: '/about', component: TBD },
   { path: '/projects', component: Projects },
