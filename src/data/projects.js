@@ -122,6 +122,19 @@ export const projects = [
             { type: "image", src: "/assets/projects/ubfreeroom/UBFreeRoom_06.jpg" },
         ],
         links: []
+    },{
+        id: "aspicproj",
+        title: "ASPICproj - NFCARDUI 🎓",
+        date: "2024-01-09",
+        brief: "Application d'un système de vérouillage/dévérouillage par NFC",
+        description: [],
+        image: '/assets/projects/aspicproj/preview.png',
+        media: [
+            { type: "image", src: "/assets/projects/aspicproj/preview.png" },
+            { type: "video", src: '/assets/projects/aspicproj/ProjetMMSE_NFCARDUI.avi', thumbnail: '/assets/projects/aspicproj/thumbnail.png' },
+
+        ],
+        links: [{ name: "GitLab", url: "https://gitlab.com/raphou66g/aspicproj" }]
     }
     /*
     ,{
