@@ -131,8 +131,7 @@ export const projects = [
         image: '/assets/projects/aspicproj/preview.png',
         media: [
             { type: "image", src: "/assets/projects/aspicproj/preview.png" },
-            { type: "video", src: '/assets/projects/aspicproj/ProjetMMSE_NFCARDUI.avi', thumbnail: '/assets/projects/aspicproj/thumbnail.png' },
-
+            { type: "video", src: '/assets/projects/aspicproj/ProjetMMSE_NFCARDUI.mp4', thumbnail: '/assets/projects/aspicproj/thumbnail.png' },
         ],
         links: [{ name: "GitLab", url: "https://gitlab.com/raphou66g/aspicproj" }]
     }
